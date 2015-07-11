@@ -1,0 +1,17 @@
+{
+  "name": "generator-parata",
+  "version": "0.1.0",
+  "description": "Yeoman generator for parata",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Swaroop SM",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.20.1"
+  }
+}
