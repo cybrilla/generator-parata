@@ -24,6 +24,7 @@ module.exports = generators.Base.extend({
       }
     });
 
+    // Set what all options / variables are available to the templates
     this.templateOptions = {
       _s: _s,
       config: config,

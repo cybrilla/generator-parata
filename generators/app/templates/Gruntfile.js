@@ -11,6 +11,8 @@ module.exports = function(grunt) {
         }
       }
     },<% if(config.isUsingSass()) { %>
+
+    // Compile `sass` files
     sass: {
       dist: {
         files: {
@@ -18,6 +20,8 @@ module.exports = function(grunt) {
         }
       }
     },<% } if(config.isUsingLess()) { %>
+
+    // Compile `less` files
     less: {
       dist: {
         files: {
@@ -25,6 +29,13 @@ module.exports = function(grunt) {
         }
       }
     },<% } %>
+
+    // Configuration for `parata`
+    parata: {
+      options: {
+        dest: '<%= config.dest %>'
+      }
+    },
 
     // Watch files and build
     watch: {
@@ -34,4 +45,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');<% if(config.isUsingSass()) { %>
   grunt.loadNpmTasks('grunt-contrib-sass'); <% } if(config.isUsingLess()) { %>
   grunt.loadNpmTasks('grunt-contrib-less'); <% } %>
+
+  // Load `parata` task
+  grunt.loadNpmTasks('parata');
+
+  // Default grunt task
+  grunt.registerTask('default', [ '<%= config.cssPreProcessor %>', 'parata' ]);
 };
