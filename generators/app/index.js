@@ -1,33 +1,12 @@
 var generators = require('yeoman-generator'),
-    _ = require('underscore'),
-    _s = require('underscore.string');
+    helper = require('../../helper.js');
 
 module.exports = generators.Base.extend({
   
   // On Initialize
   initalizing: function() {
-    var config = _.extend(this.config.getAll(), {
-      isUsingSass: function() {
-        if(this.cssPreProcessor === 'sass') {
-          return true;
-        }
-
-        return false;
-      },
-
-      isUsingLess: function() {
-        if(this.cssPreProcessor === 'less') {
-          return true;
-        }
-
-        return false;
-      }
-    });
-
-    // Set what all options / variables are available to the templates
-    this.templateOptions = {
-      _s: _s,
-      config: config,
+    this.templateOptions = function() {
+      return helper.templateOptions.apply(this);
     };
   },
 
@@ -99,7 +78,7 @@ module.exports = generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('package.json'),
         this.destinationPath('package.json'),
-        this.templateOptions
+        this.templateOptions()
       );
     },
 
@@ -108,7 +87,7 @@ module.exports = generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('Gruntfile.js'),
         this.destinationPath('Gruntfile.js'),
-        this.templateOptions
+        this.templateOptions()
       );
     }
   }
