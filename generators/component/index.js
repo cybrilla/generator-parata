@@ -28,7 +28,6 @@ module.exports = generators.Base.extend({
   writing: {
     // Generate the appropriate sass / less file
     generateStyleFile: function() {
-      console.log(this.name)
       var options = this.templateOptions(),
           config = options.config;
 
@@ -41,7 +40,14 @@ module.exports = generators.Base.extend({
 
     // Generate the example for the component
     generateExampleFile: function() {
+      var options = this.templateOptions(),
+          config = options.config;
 
+      this.fs.copyTpl(
+        this.templatePath('example.html'),
+        this.destinationPath(config.componentsDir + '/' + this.name + '/example.html'),
+        _.extend(options, getComponentProps(this))
+      );
     }
   }
 });
