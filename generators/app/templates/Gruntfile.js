@@ -38,7 +38,21 @@ module.exports = function(grunt) {
     },
 
     // Watch files and build
-    watch: {
+    watch: { <% if(config.isUsingSass()) { %>
+      sass: {
+        files: [ '**/*.scss' ],
+        tasks: [ 'sass' ],
+        options: {
+          spawn: false
+        }
+      } <% } if(config.isUsingLess()) { %>
+      less: {
+        files: [ '**/*.less' ],
+        tasks: [ 'less' ],
+        options: {
+          spawn: false
+        }
+      } <% } %>
     }
   });
 
