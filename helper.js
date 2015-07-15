@@ -18,6 +18,18 @@ module.exports = {
         }
 
         return false;
+      },
+
+      getStyleExtension: function(config) {
+        if(config.isUsingSass()) {
+          return 'scss';
+        }
+        else if(config.isUsingLess()) {
+          return 'less';
+        }
+        else {
+          throw 'Style pre-processor missing in config.';
+        }
       }
     });
 

@@ -1,0 +1,6 @@
+/**
+  * @component <%= name %>
+  * @description Short description about <%= name %>. <% if(hasVariant) {  %>
+  * @variants sample1 | sample2 <% } %>
+  */
+

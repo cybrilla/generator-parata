@@ -3,11 +3,9 @@ var generators = require('yeoman-generator'),
 
 module.exports = generators.Base.extend({
   
-  // On Initialize
-  initalizing: function() {
-    this.templateOptions = function() {
-      return helper.templateOptions.apply(this);
-    };
+  constructor: function() {
+    generators.Base.apply(this, arguments);
+    this.templateOptions = helper.templateOptions.bind(this);
   },
 
   // Prompt for details on bootstrapping
