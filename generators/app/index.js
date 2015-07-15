@@ -1,6 +1,17 @@
-var generators = require('yeoman-generator');
+var generators = require('yeoman-generator'),
+    _s = require('underscore.string');
 
 module.exports = generators.Base.extend({
+  
+  // On Initialize
+  initalizing: function() {
+    this.templateOptions = {
+      _s: _s,
+      config: this.config.getAll()
+    };
+  },
+
+  // Prompt for details on bootstrapping
   prompting: function() {
     var done = this.async();
     this.prompt([
@@ -44,7 +55,7 @@ module.exports = generators.Base.extend({
         default: 'dist',
         store: true
       },
-      
+
       // Prompt for the server port
       {
         type: 'input',
@@ -58,5 +69,27 @@ module.exports = generators.Base.extend({
       this.config.set(answers);
       done();
     }.bind(this));
+  },
+
+  // Writing
+  writing: {
+
+    // Write `package.json`
+    packageJSON: function() {
+      this.fs.copyTpl(
+        this.templatePath('package.json'),
+        this.destinationPath('package.json'),
+        this.templateOptions
+      );
+    },
+
+    // Write `Gruntfile.js`
+    gruntfile: function() {
+      this.fs.copyTpl(
+        this.templatePath('Gruntfile.js'),
+        this.destinationPath('Gruntfile.js'),
+        this.templateOptions
+      );
+    }
   }
 });

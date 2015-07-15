@@ -15,5 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "yeoman-generator": "^0.20.1"
+  },
+  "devDependencies": {
+    "underscore": "^1.8.3",
+    "underscore.string": "^3.1.1"
   }
 }
