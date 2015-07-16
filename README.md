@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/cybrilla/generator-parata.png?label=ready&title=Ready)](https://waffle.io/cybrilla/generator-parata)
 # generator-parata
 Yeoman generator for [parata](https://github.com/cybrilla/parata).
 
