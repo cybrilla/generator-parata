@@ -8,9 +8,8 @@ Make sure you have [GruntJS](http://gruntjs.com) and [Yeoman](http://yeoman.io/)
 TODO:
 Write the appropriate npm command.
 
+## Usage
 
-## Using
----
 #### Setup your application
 Create a directory of your choice say:
 
@@ -25,4 +24,19 @@ Select your preferred options and finish the setup. Once you have finished runni
 - myapp
     - package.json
     - Gruntfile.js
+```
+
+#### Generate a component
+
+`$ yo parata:component button`
+
+This will create the following files and directories:
+```
+- myapp
+  - components
+    - button
+      - style.scss / style.less
+      - example.html
+....
+....
 ```
