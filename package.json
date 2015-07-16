@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "underscore": "^1.8.3",
-    "underscore.string": "^3.1.1"
+    "underscore.string": "^3.1.1",
+    "yosay": "^1.0.4"
   }
 }
