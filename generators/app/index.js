@@ -88,5 +88,10 @@ module.exports = generators.Base.extend({
         this.templateOptions()
       );
     }
+  },
+
+  // Install depenedecies
+  install: function() {
+    this.npmInstall();
   }
 });
