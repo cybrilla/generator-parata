@@ -1,9 +1,9 @@
-[![Stories in Ready](https://badge.waffle.io/cybrilla/generator-parata.png?label=ready&title=Ready)](https://waffle.io/cybrilla/generator-parata)
 # generator-parata
 Yeoman generator for [parata](https://github.com/cybrilla/parata).
 
+[![Stories in Ready](https://badge.waffle.io/cybrilla/generator-parata.png?label=ready&title=Ready)](https://waffle.io/cybrilla/generator-parata)
+
 ## Installation
----
 Make sure you have [GruntJS](http://gruntjs.com) and [Yeoman](http://yeoman.io/) installed globally. Refer the respective documentation for installing the same.
 
 TODO:
