@@ -65,7 +65,6 @@ module.exports = generators.Base.extend({
         store: true
       },
     ], function(answers) {
-      console.log(answers);
       this.config.set(answers);
       done();
     }.bind(this));
