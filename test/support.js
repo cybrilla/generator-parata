@@ -6,6 +6,8 @@ var TEST_TEMP_DIRNAME = 'temp';
 
 module.exports = {
 
+  _testTempDirname: TEST_TEMP_DIRNAME,
+
   testTempDirPath: path.join(__dirname, '..', TEST_TEMP_DIRNAME),
 
   setupTestEnv: function(callback) {

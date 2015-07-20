@@ -21,8 +21,8 @@ module.exports = generators.Base.extend({
         type: 'input',
         name: 'name',
         message: 'Your project name',
-        store: true,
-        default: this.appname
+        default: this.appname,
+        store: true
       },
 
       // Prompt for the css pre-processor
