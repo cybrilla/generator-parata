@@ -7,7 +7,7 @@ module.exports = generators.Base.extend({
   constructor: function() {
     generators.Base.apply(this, arguments);
 
-    this.log(say('Hola! I will guide you to setup your application using `parata`. JALLY!'));
+    this.log(say('Hola, welcome to Parata!'));
     this.templateOptions = helper.templateOptions.bind(this);
   },
 
@@ -95,12 +95,10 @@ module.exports = generators.Base.extend({
 
   // Install depenedecies
   install: function() {
-    this.log(say('Your dependencies are being installed!'));
     this.npmInstall();
   },
 
   // End
   end: function() {
-    this.log(say('You are now ready to use `parata` for generating components. ENJOY!'));
   }
 });
