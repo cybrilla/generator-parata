@@ -11,9 +11,11 @@ describe('parata:app', function() {
 
   describe('with default options', function() {
     var generator;
+
     before(function(done) {
       generator = helpers.run(path.join(__dirname, '../../generators/app'))
                          .inDir(support.testTempDirPath)
+                         .withPrompts({ cssPreProcessor: 'sass' }) // Ideally yhis should be taken by default. Due to some cache issue doesn't work. Need to investigate
                          .on('end', done);
     });
 
@@ -30,6 +32,12 @@ describe('parata:app', function() {
     it('uses sass', function() {
       assert.fileContent('package.json', 'grunt-contrib-sass');
       assert.fileContent('Gruntfile.js', 'sass: {');
+    });
+
+    it('correct contents in `.yo-rc.json`', function() {
+      assert.fileContent('.yo-rc.json', /"componentsDir": "components"/);
+      assert.fileContent('.yo-rc.json', /"dest": "dist"/);
+      assert.fileContent('.yo-rc.json', /"serverPort": "8888"/);
     });
   });
 
