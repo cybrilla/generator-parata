@@ -6,7 +6,7 @@
     "app"
   ],
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test"
+    "test": "./node_modules/mocha/bin/mocha test/**/*.test.js"
   },
   "keywords": [
     "yeoman-generator"
