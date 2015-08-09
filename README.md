@@ -1,6 +1,7 @@
 # generator-parata
 
 [![Code Climate](https://codeclimate.com/github/cybrilla/generator-parata/badges/gpa.svg)](https://codeclimate.com/github/cybrilla/generator-parata)
+[![Circle CI](https://circleci.com/gh/cybrilla/generator-parata.svg?style=svg)](https://circleci.com/gh/cybrilla/generator-parata)
 [![Stories in Ready](https://badge.waffle.io/cybrilla/generator-parata.png?label=ready&title=Ready)](https://waffle.io/cybrilla/generator-parata)
 
 Yeoman generator for [parata](https://github.com/cybrilla/parata).
