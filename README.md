@@ -7,13 +7,15 @@
 Yeoman generator for [parata](https://github.com/cybrilla/parata).
 
 ## Installation
+---
 Make sure you have [GruntJS](http://gruntjs.com) and [Yeoman](http://yeoman.io/) installed globally. Refer the respective documentation for installing the same.
 
-TODO:
-Write the appropriate npm command.
+Install `generator-parata` by using:
+
+`$ npm install -g generator-parata`
 
 ## Usage
-
+---
 #### Setup your application
 Create a directory of your choice say:
 
@@ -30,17 +32,29 @@ Select your preferred options and finish the setup. Once you have finished runni
     - Gruntfile.js
 ```
 
-#### Generate a component
+#### Create your first component
+
+Let's say you would like to create a `button` component. Run the generator for creating the button component:
 
 `$ yo parata:component button`
 
-This will create the following files and directories:
+where., `button` is the name of your component.
+
+This would generate two files in `components/button/` called:
 ```
 - myapp
   - components
     - button
-      - style.scss / style.less
       - example.html
-....
+      - style.scss
 ....
 ```
+
+Note: If you were using `less` it would have created a file called: `components/button/style.less`
+
+#### Build & Serve
+
+Run `$ grunt parata --build` for building the components
+Run `$ grunt server` and point to `http://localhost:8888` on your browser.
+
+Regarding configuration options for `parata`, refer to https://github.com/cybrilla/parata.
