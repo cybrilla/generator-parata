@@ -7,7 +7,6 @@
 Yeoman generator for [parata](https://github.com/cybrilla/parata).
 
 ## Installation
----
 Make sure you have [GruntJS](http://gruntjs.com) and [Yeoman](http://yeoman.io/) installed globally. Refer the respective documentation for installing the same.
 
 Install `generator-parata` by using:
@@ -15,7 +14,7 @@ Install `generator-parata` by using:
 `$ npm install -g generator-parata`
 
 ## Usage
----
+
 #### Setup your application
 Create a directory of your choice say:
 
@@ -54,7 +53,7 @@ Note: If you were using `less` it would have created a file called: `components/
 
 #### Build & Serve
 
-Run `$ grunt parata --build` for building the components
-Run `$ grunt server` and point to `http://localhost:8888` on your browser.
+- Run `$ grunt parata --build` for building the components
+- Run `$ grunt server` and point to `http://localhost:8888` on your browser.
 
 Regarding configuration options for `parata`, refer to https://github.com/cybrilla/parata.
