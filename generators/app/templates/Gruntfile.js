@@ -7,7 +7,8 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: <%= config.serverPort %>,
-          base: '<%= config.dest %>'
+          base: '<%= config.dest %>',
+          keepalive: true
         }
       }
     },<% if(config.isUsingSass()) { %>
@@ -16,7 +17,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          config.dest + '/app.dist.css': config.componentsDir + '/**/*.scss'
+          '<%= config.dest + "/app.dist.css" %>': '<%= config.componentsDir + "/**/*.scss" %>'
         }
       }
     },<% } if(config.isUsingLess()) { %>
@@ -25,7 +26,7 @@ module.exports = function(grunt) {
     less: {
       dist: {
         files: {
-          config.dest + '/app.dist.less': config.componentsDir + '/**/*.less'
+          '<%= config.dest + "/app.dist.css" %>': '<%= config.componentsDir + "/**/*.less" %>'
         }
       }
     },<% } %>
@@ -60,9 +61,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass'); <% } if(config.isUsingLess()) { %>
   grunt.loadNpmTasks('grunt-contrib-less'); <% } %>
 
+  grunt.loadNpmTasks('grunt-contrib-connect');
+
   // Load `parata` task
   grunt.loadNpmTasks('parata');
 
   // Default grunt task
   grunt.registerTask('default', [ '<%= config.cssPreProcessor %>', 'parata' ]);
+  grunt.registerTask('serve', [ 'connect:server' ]);
 };
