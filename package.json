@@ -1,11 +1,11 @@
 {
   "name": "generator-parata",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Yeoman generator for parata",
-  "main": "generators/app/index.js",
   "files": [
     "generators/app",
-    "generators/component"
+    "generators/component",
+    "helper.js"
   ],
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test/**/*.test.js"
