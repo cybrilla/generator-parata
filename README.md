@@ -53,11 +53,12 @@ Note: If you were using `less` it would have created a file called: `components/
 
 #### Build & Serve
 
-- Run `$ grunt parata --build` for building the components
-- Run `$ grunt server` and point to `http://localhost:8888` on your browser.
+- Run `$ grunt parata` for building the components
+- Run `$ grunt serve` and point to `http://localhost:8888` on your browser.
 
 Regarding configuration options for `parata`, refer to https://github.com/cybrilla/parata.
 
 #### Watch
 
 Run `$ grunt watch`, so that your `scss / less` files will be compiled automatically.
+
