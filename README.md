@@ -12,6 +12,7 @@ Make sure you have [GruntJS](http://gruntjs.com) and [Yeoman](http://yeoman.io/)
 Install `generator-parata` by using:
 
 `$ npm install -g generator-parata`
+`$ npm link`
 
 ## Usage
 
