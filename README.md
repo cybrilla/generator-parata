@@ -39,17 +39,18 @@ Let's say you would like to create a `button` component. Run the generator for c
 
 where., `button` is the name of your component.
 
-This would generate two files in `components/button/` called:
+This would generate two files in `components/button/` and one file in `components` as shown in the structure below:
 ```
 - myapp
   - components
     - button
       - example.html
       - style.scss
+    - style.scss
 ....
 ```
 
-Note: If you were using `less` it would have created a file called: `components/button/style.less`
+Note: If you were using `less` it would have created files called: `components/button/style.less` and `components/style.less`. Also, once `components/style.scss` is created, you will be presented with an option to overwrite this custom scss file when generating a new component.
 
 #### Build & Serve
 
