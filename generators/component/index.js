@@ -51,7 +51,7 @@ module.exports = generators.Base.extend({
     },
 
     // Generate a appropriate custom sass / less file for all the components
-    generateCustomStyleFile: function() {
+    generateAppStyleFile: function() {
       var options = this.templateOptions(),
           config = options.config;
 

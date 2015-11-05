@@ -12,7 +12,6 @@ Make sure you have [GruntJS](http://gruntjs.com) and [Yeoman](http://yeoman.io/)
 Install `generator-parata` by using:
 
 `$ npm install -g generator-parata`
-`$ npm link`
 
 ## Usage
 
@@ -40,7 +39,7 @@ Let's say you would like to create a `button` component. Run the generator for c
 
 where., `button` is the name of your component.
 
-This would generate two files in `components/button/` and one file in `components` called:
+This would generate two files in `components/button/` and one file in `components` as shown in the structure below:
 ```
 - myapp
   - components
